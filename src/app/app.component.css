@@ -1,0 +1,76 @@
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(120deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: #fff;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08),
+    0 1.5px 4px 0 rgba(0, 0, 0, 0.04);
+  min-width: 320px;
+  max-width: 400px;
+}
+
+.formGroup label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #22223b;
+  letter-spacing: 0.01em;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #e0e4ea;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  outline: none;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  border-color: #d72660;
+  box-shadow: 0 0 0 2px #f7c5d8;
+}
+
+.formGroup button {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #d72660 0%, #f46036 100%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(215, 38, 96, 0.08);
+  transition: background 0.18s, box-shadow 0.18s;
+}
+
+.formGroup button:hover,
+.formGroup button:focus {
+  background: linear-gradient(90deg, #f46036 0%, #d72660 100%);
+  box-shadow: 0 4px 16px 0 rgba(215, 38, 96, 0.12);
+}
+
+.formGroup .error {
+  color: #d72660;
+  font-size: 0.92rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
