@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined");
+
+:host {
+  display: flex;
+  justify-content: center;
+  font-family: var(--inter-font, "Inter", Arial, sans-serif);
+}
+
+.autocomplete {
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-width: 15rem;
+  max-width: 22rem;
+  width: 100%;
+}
+
+.material-symbols-outlined {
+  font-size: 1.35rem;
+  pointer-events: none;
+  color: var(--hot-pink, #d72660);
+  opacity: 0.85;
+}
+
+.search-icon {
+  left: 1rem;
+  position: absolute;
+  color: var(--quaternary-contrast, #b0b0b0);
+  z-index: 2;
+}
+
+[ngComboboxInput] {
+  width: 100%;
+  min-width: 13rem;
+  font-size: 1.05rem;
+  border-radius: 0.5rem;
+  padding: 0.75rem 0.75rem 0.75rem 2.75rem;
+  color: var(--primary-contrast, #22223b);
+  outline: none;
+  border: 1.5px solid var(--quinary-contrast, #e0e4ea);
+  background-color: var(--page-background, #fff);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+[ngComboboxInput]:focus {
+  border-color: var(--hot-pink, #d72660);
+  box-shadow: 0 0 0 2px #f7c5d8;
+}
+
+[ngComboboxInput]::placeholder {
+  color: var(--quaternary-contrast, #b0b0b0);
+  opacity: 0.85;
+}
+
+[ngCombobox]:has([aria-expanded="false"]) .popup {
+  display: none;
+}
+
+.popup {
+  width: 100%;
+  margin-top: 10px;
+  padding: 0.5rem 0.25rem;
+  max-height: 13rem;
+  border-radius: 0.75rem;
+  background-color: var(--septenary-contrast, #f8fafc);
+  font-size: 0.98rem;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1), 0 1.5px 4px 0 rgba(0, 0, 0, 0.04);
+  border: 1.5px solid var(--quinary-contrast, #e0e4ea);
+  overflow-y: auto;
+  animation: fadeInMenu 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+}
+
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.no-results {
+  padding: 1.25rem 1rem;
+  color: #b0b0b0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+[ngListbox] {
+  gap: 2px;
+  height: 100%;
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: var(--quinary-contrast, #e0e4ea)
+    var(--septenary-contrast, #f8fafc);
+}
+[ngListbox]::-webkit-scrollbar {
+  width: 7px;
+  background: var(--septenary-contrast, #f8fafc);
+}
+[ngListbox]::-webkit-scrollbar-thumb {
+  background: var(--quinary-contrast, #e0e4ea);
+  border-radius: 6px;
+}
+
+[ngOption] {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin: 1px 0;
+  padding: 0.5rem 1.25rem;
+  min-height: 2.25rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--primary-contrast, #22223b);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+  position: relative;
+}
+
+[ngOption]:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--hot-pink, #d72660) 7%,
+    var(--septenary-contrast, #f8fafc)
+  );
+  color: var(--hot-pink, #d72660);
+}
+
+[ngOption][data-active="true"] {
+  outline-offset: -2px;
+  outline: 2px solid var(--hot-pink, #d72660);
+  background: color-mix(
+    in srgb,
+    var(--hot-pink, #d72660) 10%,
+    var(--septenary-contrast, #f8fafc)
+  );
+  color: var(--hot-pink, #d72660);
+}
+
+[ngOption][aria-selected="true"] {
+  color: var(--hot-pink, #d72660);
+  background-color: color-mix(
+    in srgb,
+    var(--hot-pink, #d72660) 12%,
+    var(--septenary-contrast, #f8fafc)
+  );
+}
+
+[ngOption]:not([aria-selected="true"]) .check-icon {
+  display: none;
+}
+
+.option-label {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.92;
+}
+
+.check-icon {
+  font-size: 1.1rem;
+  color: var(--hot-pink, #d72660);
+  margin-left: 0.5rem;
+  opacity: 0.85;
+}
