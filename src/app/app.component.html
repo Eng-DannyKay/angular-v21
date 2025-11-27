@@ -1,22 +1,29 @@
 <main>
 
-  <!-- <h1>Signal Forms</h1>
+  <h1>Signal Forms</h1>
   <form class="formGroup" (submit)="onSubmit($event)">
   <label >
     Email:
     <input type="email" [field]="loginForm.email">
   </label>
+     @if (loginForm.email().touched() && loginForm.email().invalid()) {
+      <ul class="error-list">
+        @for (error of loginForm.email().errors(); track error) {
+          <li>{{ error.message }}</li>
+        }
+      </ul>
+    }
   <label >
     Password:
     <input type="password" [field]="loginForm.password">
   </label>
   <button type="submit"  [disabled]="loginForm().invalid()">Login</button>
-</form> -->
+</form>
 
 
 
 <app-autocomplete></app-autocomplete>
 
-
+<app-menu-bar></app-menu-bar>
 </main>
-<!-- <app-menu-bar></app-menu-bar> -->
+

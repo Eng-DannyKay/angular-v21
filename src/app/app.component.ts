@@ -40,6 +40,7 @@ export class AppComponent implements OnInit{
   updateEmail() {
 this.loginForm.email().value.set('example@gmail.com')
   }
+  
   onSubmit(event: Event) {
     event.preventDefault();
     const  credentials = this.loginModel();
